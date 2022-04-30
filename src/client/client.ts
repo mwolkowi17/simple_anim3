@@ -5,6 +5,7 @@ import { Light1 } from './light1'
 import { Light2 } from './light2'
 import { Controls1 } from './controls1'
 import { Loader1 } from './loader1'
+import { TWEEN } from 'three/examples/jsm/libs/tween.module.min'
 
 
 
