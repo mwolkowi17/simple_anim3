@@ -9,6 +9,7 @@ import { TWEEN } from 'three/examples/jsm/libs/tween.module.min'
 
 
 
+
 export const scene = new THREE.Scene()
 
 const light1 = new Light1()
@@ -20,7 +21,7 @@ scene.add(light2.light)
 const camera1 = new Camera1()
 scene.add(camera1.camera)
 
-const renderer = new THREE.WebGLRenderer({ antialias: true })
+export const renderer = new THREE.WebGLRenderer({ antialias: true })
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
@@ -52,27 +53,27 @@ function onDocumentMouseMove(event: MouseEvent) {
     )
     intersects = raycaster.intersectObjects(pickableObjects, false)
 
-    // if (intersects.length > 0) {
-    //     if( intersects[0].object===pickableObjects[0]){
-    //         loader1.play1()
-    //     }
-    //     if( intersects[0].object===pickableObjects[1]){
-    //         loader1.play2()
-    //     }
-    //     if( intersects[0].object===pickableObjects[2]){
-    //         loader1.play3()
-    //     }
-    //     if( intersects[0].object===pickableObjects[3]){
-    //         loader1.play4()
-    //     }
-    //     if( intersects[0].object===pickableObjects[4]){
-    //         loader1.play5()
-    //     }
-    //     if( intersects[0].object===pickableObjects[5]){
-    //         loader1.play6()
-    //     }
+    if (intersects.length > 0) {
+        if( intersects[0].object===pickableObjects[0]){
+            loader1.play1()
+        }
+        // if( intersects[0].object===pickableObjects[1]){
+        //     loader1.play2()
+        // }
+        // if( intersects[0].object===pickableObjects[2]){
+        //     loader1.play3()
+        // }
+        // if( intersects[0].object===pickableObjects[3]){
+        //     loader1.play4()
+        // }
+        // if( intersects[0].object===pickableObjects[4]){
+        //     loader1.play5()
+        // }
+        // if( intersects[0].object===pickableObjects[5]){
+        //     loader1.play6()
+        // }
          
-    // } 
+    } 
   
 }
 
@@ -87,13 +88,14 @@ function animate() {
     controls1.main.update()
 
     if (loader1.mixer) loader1.mixer.update(clock.getDelta())
+    TWEEN.update()
 
     render()
 
     stats.update()
 }
 
-function render() {
+export function render() {
     renderer.render(scene, camera1.camera)
 }
 

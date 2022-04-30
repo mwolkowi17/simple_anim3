@@ -1,6 +1,9 @@
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { scene, pickableObjects, intersectedObject } from './client'
+import { TWEEN } from 'three/examples/jsm/libs/tween.module.min'
+import { render } from './client'
+
 
 export class Loader1 {
     main: GLTFLoader
@@ -56,16 +59,23 @@ export class Loader1 {
         })
     }
 
-    // play1() {
-    //     if (!this.ifplayed) {
-    //         this.action.play()
-    //         this.ifplayed = true
-    //         setTimeout(() => {
-    //             this.action.stop();
-    //             this.ifplayed = false
-    //         }, 4000);
-          
-    //     }
+    play1() {
+        if (!this.ifplayed) {
+            new TWEEN.Tween(pickableObjects[0].scale)
+            .to(
+                {
+                    
+                     y: 1.1
+                    
+                }
+               
+            )
+            //.onUpdate(() => render())
+            .start()
+            
+          console.log(pickableObjects[0])
+        }
+    }
 
     // }
 
