@@ -67,25 +67,42 @@ export class Loader1 {
                     
                      y: 1.1
                     
-                },200
+                },400
                
             )
+            .easing(TWEEN.Easing.Cubic.InOut)
             //.onUpdate(() => render())
             .start()
-            new TWEEN.Tween(pickableObjects[0].scale)
-            .to(
-                {
+            // new TWEEN.Tween(pickableObjects[0].scale)
+            // .to(
+            //     {
                     
-                     y: 0.1
+            //          y: 0.1
                     
-                },200
+            //     },800
                
-            )
-            .delay (400)
-            //.onUpdate(() => render())
-            .start()
-          
+            // )
+            // .easing(TWEEN.Easing.Cubic.InOut)
+            // .delay (400)
+            // //.onUpdate(() => render())
+            // .start()
+            .onComplete(() => {
+                new TWEEN.Tween(pickableObjects[0].scale)
+                    .to(
+                        {
+                            // x: p.x,
+                            y: 0.1
+                            // z: p.z,
+                        },
+                        400
+                    )
+                    //.delay (250)
+                    .easing(TWEEN.Easing.Bounce.InOut)
+                    //.onUpdate(() => render())
+                    .start()
+            })
         }
+        
     }
 
     // }
