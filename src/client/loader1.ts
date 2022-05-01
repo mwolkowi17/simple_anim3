@@ -61,6 +61,8 @@ export class Loader1 {
 
     play1() {
         if (!this.ifplayed) {
+            this.ifplayed=true;
+            
             new TWEEN.Tween(pickableObjects[0].scale)
             .to(
                 {

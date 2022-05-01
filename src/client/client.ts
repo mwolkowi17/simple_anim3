@@ -54,7 +54,9 @@ function onDocumentMouseMove(event: MouseEvent) {
     intersects = raycaster.intersectObjects(pickableObjects, false)
 
     if (intersects.length > 0) {
+        
         if( intersects[0].object===pickableObjects[0]){
+            
             loader1.play1()
             //loader1.ifplayed=true
         }
