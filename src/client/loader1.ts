@@ -67,13 +67,24 @@ export class Loader1 {
                     
                      y: 1.1
                     
-                }
+                },200
                
             )
             //.onUpdate(() => render())
             .start()
-            
-          console.log(pickableObjects[0])
+            new TWEEN.Tween(pickableObjects[0].scale)
+            .to(
+                {
+                    
+                     y: 0.1
+                    
+                },200
+               
+            )
+            .delay (400)
+            //.onUpdate(() => render())
+            .start()
+          
         }
     }
 
