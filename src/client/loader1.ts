@@ -61,6 +61,8 @@ export class Loader1 {
 
     play1() {
         if (!this.ifplayed) {
+            this.ifplayed=true;
+            
             new TWEEN.Tween(pickableObjects[0].scale)
             .to(
                 {
@@ -70,6 +72,7 @@ export class Loader1 {
                 },200
                
             )
+            .easing(TWEEN.Easing.Cubic.InOut)
             //.onUpdate(() => render())
             .start()
             new TWEEN.Tween(pickableObjects[0].scale)
@@ -81,6 +84,7 @@ export class Loader1 {
                 },200
                
             )
+            .easing(TWEEN.Easing.Cubic.InOut)
             .delay (400)
             //.onUpdate(() => render())
             .start()
