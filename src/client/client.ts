@@ -7,9 +7,6 @@ import { Controls1 } from './controls1'
 import { Loader1 } from './loader1'
 import { TWEEN } from 'three/examples/jsm/libs/tween.module.min'
 
-
-
-
 export const scene = new THREE.Scene()
 
 const light1 = new Light1()
@@ -47,36 +44,32 @@ function onDocumentMouseMove(event: MouseEvent) {
     raycaster.setFromCamera(
         {
             x: (event.clientX / renderer.domElement.clientWidth) * 2 - 1,
-            y: -(event.clientY / renderer.domElement.clientHeight) * 2 + 1
+            y: -(event.clientY / renderer.domElement.clientHeight) * 2 + 1,
         },
         camera1.camera
     )
     intersects = raycaster.intersectObjects(pickableObjects, false)
 
     if (intersects.length > 0) {
-        
-        if( intersects[0].object===pickableObjects[0]){
-            
+        if (intersects[0].object === pickableObjects[0]) {
             loader1.play1()
         }
-        if( intersects[0].object===pickableObjects[1]){
+        if (intersects[0].object === pickableObjects[1]) {
             loader1.play2()
         }
-        if( intersects[0].object===pickableObjects[2]){
+        if (intersects[0].object === pickableObjects[2]) {
             loader1.play3()
         }
-        if( intersects[0].object===pickableObjects[3]){
+        if (intersects[0].object === pickableObjects[3]) {
             loader1.play4()
         }
-        if( intersects[0].object===pickableObjects[4]){
+        if (intersects[0].object === pickableObjects[4]) {
             loader1.play5()
         }
-        if( intersects[0].object===pickableObjects[5]){
+        if (intersects[0].object === pickableObjects[5]) {
             loader1.play6()
         }
-         
-    } 
-  
+    }
 }
 
 const stats = Stats()
@@ -97,7 +90,7 @@ function animate() {
     stats.update()
 }
 
-export function render() {
+function render() {
     renderer.render(scene, camera1.camera)
 }
 

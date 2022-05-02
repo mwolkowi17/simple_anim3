@@ -1,9 +1,8 @@
-
-export class Trig1{
+export class Trig1 {
     element: HTMLElement
 
-    constructor(){
-        this.element= document.createElement('div')
+    constructor() {
+        this.element = document.createElement('div')
         this.element.className = 'tra'
     }
 }

@@ -2,8 +2,6 @@ import * as THREE from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { scene, pickableObjects, intersectedObject } from './client'
 import { TWEEN } from 'three/examples/jsm/libs/tween.module.min'
-import { render } from './client'
-
 
 export class Loader1 {
     main: GLTFLoader
@@ -21,15 +19,14 @@ export class Loader1 {
     ifplayed4: boolean
     ifplayed5: boolean
 
-
     constructor() {
         this.main = new GLTFLoader()
-        this.ifplayed = false;
-        this.ifplayed1 = false;
-        this.ifplayed2 = false;
-        this.ifplayed3 = false;
-        this.ifplayed4 = false;
-        this.ifplayed5 = false;
+        this.ifplayed = false
+        this.ifplayed1 = false
+        this.ifplayed2 = false
+        this.ifplayed3 = false
+        this.ifplayed4 = false
+        this.ifplayed5 = false
         this.main.load('models/deform1.gltf', (gltf) => {
             gltf.scene.position.set(0, 1, 0)
             gltf.scene.rotation.set(Math.PI / 2.2, 0, 0)
@@ -40,12 +37,12 @@ export class Loader1 {
             this.action3 = this.mixer.clipAction(gltf.animations[3])
             this.action4 = this.mixer.clipAction(gltf.animations[4])
             this.action5 = this.mixer.clipAction(gltf.animations[5])
-            this.action.play();
-            this.action1.play();
-            this.action2.play();
-            this.action3.play();
-            this.action4.play();
-            this.action5.play();
+            this.action.play()
+            this.action1.play()
+            this.action2.play()
+            this.action3.play()
+            this.action4.play()
+            this.action5.play()
             gltf.scene.traverse(function (child) {
                 if ((child as THREE.Mesh).isMesh) {
                     const m = child as THREE.Mesh
@@ -61,14 +58,14 @@ export class Loader1 {
 
     play1() {
         if (!this.ifplayed) {
-            this.ifplayed = true;
+            this.ifplayed = true
 
             new TWEEN.Tween(pickableObjects[0].scale)
                 .to(
                     {
-                        y: 1.1
-                    }, 400
-
+                        y: 1.1,
+                    },
+                    400
                 )
                 .easing(TWEEN.Easing.Cubic.InOut)
                 .start()
@@ -76,7 +73,7 @@ export class Loader1 {
                     new TWEEN.Tween(pickableObjects[0].scale)
                         .to(
                             {
-                                y: 0.1
+                                y: 0.1,
                             },
                             400
                         )
@@ -87,22 +84,18 @@ export class Loader1 {
                         })
                 })
         }
-
     }
 
-
-
     play2() {
-
         if (!this.ifplayed) {
-            this.ifplayed = true;
+            this.ifplayed = true
 
             new TWEEN.Tween(pickableObjects[1].scale)
                 .to(
                     {
-                        y: 1.1
-                    }, 400
-
+                        y: 1.1,
+                    },
+                    400
                 )
                 .easing(TWEEN.Easing.Cubic.InOut)
                 .start()
@@ -110,7 +103,7 @@ export class Loader1 {
                     new TWEEN.Tween(pickableObjects[1].scale)
                         .to(
                             {
-                                y: 0.1
+                                y: 0.1,
                             },
                             400
                         )
@@ -121,20 +114,18 @@ export class Loader1 {
                         })
                 })
         }
-
     }
 
     play3() {
-
         if (!this.ifplayed) {
-            this.ifplayed = true;
+            this.ifplayed = true
 
             new TWEEN.Tween(pickableObjects[2].scale)
                 .to(
                     {
-                        y: 1.1
-                    }, 400
-
+                        y: 1.1,
+                    },
+                    400
                 )
                 .easing(TWEEN.Easing.Cubic.InOut)
                 .start()
@@ -142,7 +133,7 @@ export class Loader1 {
                     new TWEEN.Tween(pickableObjects[2].scale)
                         .to(
                             {
-                                y: 0.1
+                                y: 0.1,
                             },
                             400
                         )
@@ -153,19 +144,18 @@ export class Loader1 {
                         })
                 })
         }
-
     }
 
     play4() {
         if (!this.ifplayed) {
-            this.ifplayed = true;
+            this.ifplayed = true
 
             new TWEEN.Tween(pickableObjects[3].scale)
                 .to(
                     {
-                        y: 1.1
-                    }, 400
-
+                        y: 1.1,
+                    },
+                    400
                 )
                 .easing(TWEEN.Easing.Cubic.InOut)
                 .start()
@@ -173,7 +163,7 @@ export class Loader1 {
                     new TWEEN.Tween(pickableObjects[3].scale)
                         .to(
                             {
-                                y: 0.1
+                                y: 0.1,
                             },
                             400
                         )
@@ -184,19 +174,18 @@ export class Loader1 {
                         })
                 })
         }
-
     }
 
     play5() {
         if (!this.ifplayed) {
-            this.ifplayed = true;
+            this.ifplayed = true
 
             new TWEEN.Tween(pickableObjects[4].scale)
                 .to(
                     {
-                        y: 1.1
-                    }, 400
-
+                        y: 1.1,
+                    },
+                    400
                 )
                 .easing(TWEEN.Easing.Cubic.InOut)
                 .start()
@@ -204,7 +193,7 @@ export class Loader1 {
                     new TWEEN.Tween(pickableObjects[4].scale)
                         .to(
                             {
-                                y: 0.1
+                                y: 0.1,
                             },
                             400
                         )
@@ -215,19 +204,18 @@ export class Loader1 {
                         })
                 })
         }
-
     }
 
     play6() {
         if (!this.ifplayed) {
-            this.ifplayed = true;
+            this.ifplayed = true
 
             new TWEEN.Tween(pickableObjects[5].scale)
                 .to(
                     {
-                        y: 1.1
-                    }, 400
-
+                        y: 1.1,
+                    },
+                    400
                 )
                 .easing(TWEEN.Easing.Cubic.InOut)
                 .start()
@@ -235,7 +223,7 @@ export class Loader1 {
                     new TWEEN.Tween(pickableObjects[5].scale)
                         .to(
                             {
-                                y: 0.1
+                                y: 0.1,
                             },
                             400
                         )
@@ -246,7 +234,5 @@ export class Loader1 {
                         })
                 })
         }
-
     }
-
 }
