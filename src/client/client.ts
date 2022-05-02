@@ -18,7 +18,7 @@ scene.add(light2.light)
 const camera1 = new Camera1()
 scene.add(camera1.camera)
 
-export const renderer = new THREE.WebGLRenderer({ antialias: true })
+const renderer = new THREE.WebGLRenderer({ antialias: true })
 renderer.setSize(window.innerWidth, window.innerHeight)
 document.body.appendChild(renderer.domElement)
 
