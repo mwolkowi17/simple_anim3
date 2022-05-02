@@ -65,7 +65,7 @@ export class Loader1 {
                     {
                         y: 1.1,
                     },
-                    400
+                    800
                 )
                 .easing(TWEEN.Easing.Cubic.InOut)
                 .start()
@@ -75,7 +75,7 @@ export class Loader1 {
                             {
                                 y: 0.1,
                             },
-                            400
+                            800
                         )
                         .easing(TWEEN.Easing.Bounce.InOut)
                         .start()
