@@ -61,112 +61,192 @@ export class Loader1 {
 
     play1() {
         if (!this.ifplayed) {
-            this.ifplayed=true;
-            
+            this.ifplayed = true;
+
             new TWEEN.Tween(pickableObjects[0].scale)
-            .to(
-                {
-                    
-                     y: 1.1
-                    
-                },400
-               
-            )
-            .easing(TWEEN.Easing.Cubic.InOut)
-            //.onUpdate(() => render())
-            .start()
-            // new TWEEN.Tween(pickableObjects[0].scale)
-            // .to(
-            //     {
-                    
-            //          y: 0.1
-                    
-            //     },800
-               
-            // )
-            // .easing(TWEEN.Easing.Cubic.InOut)
-            // .delay (400)
-            // //.onUpdate(() => render())
-            // .start()
-            .onComplete(() => {
-                new TWEEN.Tween(pickableObjects[0].scale)
-                    .to(
-                        {
-                            // x: p.x,
-                            y: 0.1
-                            // z: p.z,
-                        },
-                        400
-                    )
-                    //.delay (250)
-                    .easing(TWEEN.Easing.Bounce.InOut)
-                    //.onUpdate(() => render())
-                    .start()
-                    .onComplete(()=>{
-                        this.ifplayed=false
-                    })
-            })
+                .to(
+                    {
+                        y: 1.1
+                    }, 400
+
+                )
+                .easing(TWEEN.Easing.Cubic.InOut)
+                .start()
+                .onComplete(() => {
+                    new TWEEN.Tween(pickableObjects[0].scale)
+                        .to(
+                            {
+                                y: 0.1
+                            },
+                            400
+                        )
+                        .easing(TWEEN.Easing.Bounce.InOut)
+                        .start()
+                        .onComplete(() => {
+                            this.ifplayed = false
+                        })
+                })
         }
-        
+
     }
 
-    // }
 
-    // play2() {
 
-    //     if (!this.ifplayed1) {
-    //         this.action1.play()
-    //         this.ifplayed1 = true
-    //         setTimeout(() => {
-    //             this.action1.stop();
-    //             this.ifplayed1 = false
-    //         }, 4000);
-    //     }
-    // }
+    play2() {
 
-    // play3() {
+        if (!this.ifplayed) {
+            this.ifplayed = true;
 
-    //     if (!this.ifplayed2) {
-    //         this.action2.play()
-    //         this.ifplayed2 = true
-    //         setTimeout(() => {
-    //             this.action2.stop();
-    //             this.ifplayed2 = false
-    //         }, 4000);
-    //     }
-    // }
+            new TWEEN.Tween(pickableObjects[1].scale)
+                .to(
+                    {
+                        y: 1.1
+                    }, 400
 
-    // play4() {
-    //     if (!this.ifplayed3) {
-    //         this.action3.play()
-    //         this.ifplayed3 = true
-    //         setTimeout(() => {
-    //             this.action3.stop();
-    //             this.ifplayed3 = false
-    //         }, 4000);
-    //     }
-    // }
+                )
+                .easing(TWEEN.Easing.Cubic.InOut)
+                .start()
+                .onComplete(() => {
+                    new TWEEN.Tween(pickableObjects[1].scale)
+                        .to(
+                            {
+                                y: 0.1
+                            },
+                            400
+                        )
+                        .easing(TWEEN.Easing.Bounce.InOut)
+                        .start()
+                        .onComplete(() => {
+                            this.ifplayed = false
+                        })
+                })
+        }
 
-    // play5() {
-    //     if (!this.ifplayed4) {
-    //         this.action4.play()
-    //         this.ifplayed4 = true
-    //         setTimeout(() => {
-    //             this.action4.stop();
-    //             this.ifplayed4 = false
-    //         }, 4000);
-    //     }
-    // }
+    }
 
-    // play6() {
-    //     if (!this.ifplayed5) {
-    //         this.action5.play()
-    //         this.ifplayed5 = true
-    //         setTimeout(() => {
-    //             this.action5.stop();
-    //             this.ifplayed5 = false
-    //         }, 4000);
-    //     }
-    // }
+    play3() {
+
+        if (!this.ifplayed) {
+            this.ifplayed = true;
+
+            new TWEEN.Tween(pickableObjects[2].scale)
+                .to(
+                    {
+                        y: 1.1
+                    }, 400
+
+                )
+                .easing(TWEEN.Easing.Cubic.InOut)
+                .start()
+                .onComplete(() => {
+                    new TWEEN.Tween(pickableObjects[2].scale)
+                        .to(
+                            {
+                                y: 0.1
+                            },
+                            400
+                        )
+                        .easing(TWEEN.Easing.Bounce.InOut)
+                        .start()
+                        .onComplete(() => {
+                            this.ifplayed = false
+                        })
+                })
+        }
+
+    }
+
+    play4() {
+        if (!this.ifplayed) {
+            this.ifplayed = true;
+
+            new TWEEN.Tween(pickableObjects[3].scale)
+                .to(
+                    {
+                        y: 1.1
+                    }, 400
+
+                )
+                .easing(TWEEN.Easing.Cubic.InOut)
+                .start()
+                .onComplete(() => {
+                    new TWEEN.Tween(pickableObjects[3].scale)
+                        .to(
+                            {
+                                y: 0.1
+                            },
+                            400
+                        )
+                        .easing(TWEEN.Easing.Bounce.InOut)
+                        .start()
+                        .onComplete(() => {
+                            this.ifplayed = false
+                        })
+                })
+        }
+
+    }
+
+    play5() {
+        if (!this.ifplayed) {
+            this.ifplayed = true;
+
+            new TWEEN.Tween(pickableObjects[4].scale)
+                .to(
+                    {
+                        y: 1.1
+                    }, 400
+
+                )
+                .easing(TWEEN.Easing.Cubic.InOut)
+                .start()
+                .onComplete(() => {
+                    new TWEEN.Tween(pickableObjects[4].scale)
+                        .to(
+                            {
+                                y: 0.1
+                            },
+                            400
+                        )
+                        .easing(TWEEN.Easing.Bounce.InOut)
+                        .start()
+                        .onComplete(() => {
+                            this.ifplayed = false
+                        })
+                })
+        }
+
+    }
+
+    play6() {
+        if (!this.ifplayed) {
+            this.ifplayed = true;
+
+            new TWEEN.Tween(pickableObjects[5].scale)
+                .to(
+                    {
+                        y: 1.1
+                    }, 400
+
+                )
+                .easing(TWEEN.Easing.Cubic.InOut)
+                .start()
+                .onComplete(() => {
+                    new TWEEN.Tween(pickableObjects[5].scale)
+                        .to(
+                            {
+                                y: 0.1
+                            },
+                            400
+                        )
+                        .easing(TWEEN.Easing.Bounce.InOut)
+                        .start()
+                        .onComplete(() => {
+                            this.ifplayed = false
+                        })
+                })
+        }
+
+    }
 
 }

@@ -58,23 +58,22 @@ function onDocumentMouseMove(event: MouseEvent) {
         if( intersects[0].object===pickableObjects[0]){
             
             loader1.play1()
-            //loader1.ifplayed=true
         }
-        // if( intersects[0].object===pickableObjects[1]){
-        //     loader1.play2()
-        // }
-        // if( intersects[0].object===pickableObjects[2]){
-        //     loader1.play3()
-        // }
-        // if( intersects[0].object===pickableObjects[3]){
-        //     loader1.play4()
-        // }
-        // if( intersects[0].object===pickableObjects[4]){
-        //     loader1.play5()
-        // }
-        // if( intersects[0].object===pickableObjects[5]){
-        //     loader1.play6()
-        // }
+        if( intersects[0].object===pickableObjects[1]){
+            loader1.play2()
+        }
+        if( intersects[0].object===pickableObjects[2]){
+            loader1.play3()
+        }
+        if( intersects[0].object===pickableObjects[3]){
+            loader1.play4()
+        }
+        if( intersects[0].object===pickableObjects[4]){
+            loader1.play5()
+        }
+        if( intersects[0].object===pickableObjects[5]){
+            loader1.play6()
+        }
          
     } 
   
