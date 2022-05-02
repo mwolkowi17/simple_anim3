@@ -102,6 +102,9 @@ export class Loader1 {
                     .easing(TWEEN.Easing.Bounce.InOut)
                     //.onUpdate(() => render())
                     .start()
+                    .onComplete(()=>{
+                        this.ifplayed=false
+                    })
             })
         }
         
