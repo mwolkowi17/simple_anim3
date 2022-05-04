@@ -27,7 +27,7 @@ export class Loader1 {
         this.ifplayed3 = false
         this.ifplayed4 = false
         this.ifplayed5 = false
-        this.main.load('models/deform1.gltf', (gltf) => {
+        this.main.load('models/deform2.gltf', (gltf) => {
             gltf.scene.position.set(0, 1, 0)
             gltf.scene.rotation.set(Math.PI / 2.2, 0, 0)
             this.mixer = new THREE.AnimationMixer(gltf.scene)
